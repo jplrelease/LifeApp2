@@ -2,6 +2,8 @@ package com.lifeapp;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -39,15 +41,7 @@ public class MainActivity extends Activity {
             @Override
             public void onItemClick(AdapterView<?> parent, final View view, int position, long id) {
                 final String item = (String) parent.getItemAtPosition(position);
-                view.animate().setDuration(2000).alpha(0)
-                        .withEndAction(new Runnable() {
-                            @Override
-                            public void run() {
-                                list.remove(item);
-                                adapter.notifyDataSetChanged();
-                                view.setAlpha(1);
-                            }
-                        });
+                view.setBackgroundColor(Color.BLUE);
             }
         });
     }
