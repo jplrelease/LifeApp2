@@ -9,4 +9,31 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.lifeapp.newUser">
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:inputType="textPersonName"
+        android:text="Insert username here"
+        android:ems="10"
+        android:id="@+id/editText"
+        android:layout_marginTop="48dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:capitalize="characters"
+        android:clickable="true"
+        android:editable="false"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:textStyle="italic" />
+
+    <Button
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:text="New Button"
+        android:id="@+id/button"
+        android:layout_below="@+id/editText"
+        android:layout_alignEnd="@+id/editText"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="21dp"
+        android:longClickable="true" />
 </RelativeLayout>
