@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.view.View;
 
-public class newUser extends Activity {
+public class UserCreationController extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,7 +15,7 @@ public class newUser extends Activity {
 
         public void andrewClick(View v)
         {
-            Intent intent = new Intent(newUser.this, MainActivity.class);
+            Intent intent = new Intent(UserCreationController.this, MainActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
             startActivity(intent);
         }

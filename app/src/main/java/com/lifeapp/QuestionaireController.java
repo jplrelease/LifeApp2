@@ -1,14 +1,13 @@
 package com.lifeapp;
 
-import android.os.Bundle;
 import android.app.Activity;
-import android.widget.AdapterView;
+import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class Questionaire extends Activity {
+public class QuestionaireController extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,7 +16,7 @@ public class Questionaire extends Activity {
 
         final ListView myList = (ListView) findViewById(R.id.listView);
 
-        String[] answers = new String [] {"Vidya Games","Being a Shitter","Being a Baller"};
+        String[] answers = new String [] {"Video Games"};
 
         final ArrayList<String> list = new ArrayList<String>();
         for (int i = 0; i < answers.length; i++) {
