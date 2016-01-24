@@ -23,6 +23,8 @@ public class QuestionaireController extends Activity {
             list.add(answers[i]);
         }
 
+        myList.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
+
         final ArrayAdapter adapter = new ArrayAdapter(this,
                 android.R.layout.simple_list_item_1, list);
         myList.setAdapter(adapter);
