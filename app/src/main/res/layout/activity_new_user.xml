@@ -33,7 +33,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Create User"
-        android:id="@+id/button"
+        android:id="@+id/userButton"
         android:longClickable="true"
         android:theme="@android:style/ButtonBar"
         android:padding="5px"
