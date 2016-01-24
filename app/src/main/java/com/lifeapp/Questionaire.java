@@ -2,6 +2,8 @@ package com.lifeapp;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -22,11 +24,11 @@ public class Questionaire extends Activity {
             list.add(answers[i]);
         }
 
-        final StableArrayAdapter adapter = new StableArrayAdapter(this,
+        final ArrayAdapter adapter = new ArrayAdapter(this,
                 android.R.layout.simple_list_item_1, list);
-        HobbyList.setAdapter(adapter);
+        myList.setAdapter(adapter);
 
-        
+
     }
 
 }
