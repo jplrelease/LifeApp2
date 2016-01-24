@@ -12,14 +12,10 @@ public class newUser extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_user);
     }
-
-        public void andrewClick(View v)
-        {
-            Intent intent = new Intent(newUser.this, MainActivity.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-            startActivity(intent);
-        }
-
-
-
+    public void andrewClick(View v)
+    {
+        Intent intent = new Intent(newUser.this, Questionaire.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+        startActivity(intent);
+    }
 }
