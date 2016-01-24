@@ -13,21 +13,16 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:inputType="textPersonName"
-        android:text="Insert username here"
         android:ems="10"
-        android:id="@+id/editText"
+        android:id="@+id/userText"
         android:layout_marginTop="48dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:capitalize="characters"
         android:clickable="true"
-        android:editable="false"
         android:textAlignment="center"
         android:textSize="20dp"
         android:textStyle="italic"
-        android:theme="@style/AppTheme"
-        android:onClick="clickUsername"/>
+        android:theme="@style/AppTheme" />
 
     <Button
         android:layout_width="fill_parent"
@@ -44,7 +39,7 @@
         android:typeface="sans"
         android:singleLine="true"
         android:onClick="andrewClick"
-        android:layout_below="@+id/editText"
+        android:layout_below="@+id/userText"
         android:layout_alignParentStart="true"
         android:layout_marginTop="53dp"/>
 </RelativeLayout>
