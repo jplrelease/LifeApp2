@@ -14,11 +14,11 @@
             android:label="@string/app_name">
         </activity>
         <activity
-            android:name=".newUser"
+            android:name=".UserCreationController"
             android:label="@string/title_activity_new_user">
         </activity>
         <activity
-            android:name=".Questionaire"
+            android:name=".QuestionaireController"
             android:label="@string/title_activity_questionaire">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

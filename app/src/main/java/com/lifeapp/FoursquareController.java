@@ -123,7 +123,6 @@ public class FoursquareController extends ListActivity {
 
         ArrayList<FoursquareVenue> temp = new ArrayList();
         try {
-
             // make an jsonObject in order to parse the response
             JSONObject jsonObject = new JSONObject(response);
 
