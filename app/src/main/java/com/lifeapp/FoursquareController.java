@@ -17,7 +17,6 @@ import org.json.JSONObject;
 import java.io.BufferedInputStream;
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.List;
 
 public class FoursquareController extends ListActivity {
     ArrayList<FoursquareVenue> venuesList;
@@ -42,12 +41,12 @@ public class FoursquareController extends ListActivity {
         new Foursquare().execute();
     }
 
-    private class Foursquare extends AsyncTask {
+    private class Foursquare extends AsyncTask<String,Void,String> {
 
         String temp;
 
         @Override
-        protected Object doInBackground(Object[] params) {
+        protected String doInBackground(String... params) {
             temp = makeCall("https://api.foursquare.com/v2/venues/search?client_id=" + CLIENT_ID + "&client_secret=" + CLIENT_SECRET + "&v=20130815&ll=40.7463956,-73.9852992");
             return "";
         }
@@ -57,6 +56,7 @@ public class FoursquareController extends ListActivity {
             // we can start a progress bar here
         }
 
+        @Override
         protected void onPostExecute(String result) {
             if (temp == null) {
                 // we have an error to the call
@@ -71,7 +71,7 @@ public class FoursquareController extends ListActivity {
                     e.printStackTrace();
                 }
 
-                List listTitle = new ArrayList();
+                ArrayList listTitle = new ArrayList();
 
                 for (int i = 0; i < venuesList.size(); i++) {
                     // make a list of the venus that are loaded in the list.
@@ -89,13 +89,13 @@ public class FoursquareController extends ListActivity {
 
     public static String makeCall(String url) {
 
-        // string buffers the url
+        // string buffer for the the URL
         StringBuffer buffer_string = new StringBuffer(url);
         String replyString = "";
 
-        // instanciate an HttpClient
+        // instantiate an HttpClient
         HttpClient httpclient = new DefaultHttpClient();
-        // instanciate an HttpGet
+        // instantiate an HttpGet
         HttpGet httpget = new HttpGet(buffer_string.toString());
 
         try {
@@ -121,7 +121,7 @@ public class FoursquareController extends ListActivity {
 
     private static ArrayList parseFoursquare(final String response) throws JSONException {
 
-        ArrayList temp = new ArrayList();
+        ArrayList<FoursquareVenue> temp = new ArrayList();
         try {
 
             // make an jsonObject in order to parse the response
